@@ -1,0 +1,83 @@
+* {
+	font-family: Roboto, sans-serif;
+	box-sizing: border-box;
+}
+.login-container1 {
+	background: #e1e1e1;
+	margin: 0;
+	overflow-x: hidden;
+}
+.login-container {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr 1fr;
+}
+.bg-phone {
+	display: none;
+	position: absolute;
+	width: 100vw;
+	overflow: hidden;
+	z-index: -2;
+}
+.bg-desktop {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	z-index: -2;
+}
+@media screen and (max-width: 1008px) {
+	.bg-desktop { display: none; }
+	/* .bg-phone { display: block; } */
+	.cta {
+		background: #325987;
+		padding: 2em;
+		border-radius: 1em;
+	}
+	.container {
+		grid-template-columns: 1fr;
+	}
+}
+.container > div{
+	margin: auto;
+}
+.cta {
+	color: white;
+	text-align: center;
+	margin: 1em;
+}
+.infos {
+	color: black;
+	margin: 1em;
+}
+.blabla {
+	font-size: 1.2em;
+	width: 400px;
+}
+.cta h1 {
+	font-size: 5em;
+	margin: 0;
+}
+.cta p {
+	font-size: 1.4rem;
+	margin-bottom: 69px;
+}
+.login {
+	display: flex;
+	justify-content: center;
+}
+.login a {
+	text-transform: uppercase;
+	font-weight: 700;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 0 20px;
+	font-size: 1.4em;
+}
+.login a.primary {
+	background: #C70000;
+	color: white;
+}
+.login a.secondary {
+	background: white;
+	color: #C70000;
+}

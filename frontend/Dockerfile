@@ -1,14 +1,10 @@
-FROM node:13.12.0-alpine
+FROM node:18-alpine3.15
 
 WORKDIR /app
 
-ENV PATH /app/node_modules/.bin:$PATH
-
-RUN npm install react-scripts@latest
 COPY package.json ./
-COPY package-lock.json ./
-RUN npm install --silent
+RUN npm install
 
 COPY . ./
 
-CMD npm start
+CMD npm run dev

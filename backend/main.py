@@ -52,7 +52,8 @@ async def login(request: Request):
 @app.get('/auth')
 async def auth(request: Request):
     token = await oauth.google.authorize_access_token(request)
-    user = await oauth.google.parse_id_token(request, token)
+    user = token['userinfo']
+    # user = await oauth.google.parse_id_token(request, token)
     uid = user['sub']
     u = db.user_get(uid)
     if u:

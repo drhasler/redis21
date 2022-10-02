@@ -13,9 +13,7 @@ import Profile from './pages/Profile';
 import Collections from './pages/Collections';
 import SomeCollection from './pages/SomeCollection';
 import SearchResults from './pages/SearchResults';
-
-import login from './login.html';
-import logo from './movify-sm.png';
+import Login from './pages/Login';
 
 const UserContext = React.createContext();
 // {id, name}
@@ -46,8 +44,7 @@ function App() {
   if (user === 'loading') {
     return <h1>Loading</h1>
   } else if (user === 'nope') {
-    const html = login.replace('$MOVIFY_LOGO', logo)
-    return <div dangerouslySetInnerHTML={{__html:html}}></div>
+    return <Login />
   } else { // yay authenticated
     return (
       <>
